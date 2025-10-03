@@ -1,0 +1,24 @@
+# Nom du workflow
+name: Hello
+
+# Événement qui déclenche le workflow
+on: [push]
+
+# Jobs à exécuter
+jobs:
+  # Nom du job
+  mon-premier-job:
+    # Type de machine sur laquelle exécuter le job
+    runs-on: ubuntu-latest
+
+    # Étapes du job
+    steps:
+      # Étape 1 : Affiche un message simple
+      - name: Dire bonjour
+        run: echo "Hello, world!"
+
+      # Étape 2 : Affiche un message sur plusieurs lignes
+      - name: Message de fin
+        run: |
+          echo "Ce workflow a été exécuté avec succès."
+          echo "À bientôt !"
